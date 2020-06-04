@@ -27,8 +27,8 @@ const $save = $('#save');
 const $cancel = $('#cancel');
 
 $save.click(function() {
-  const checkedOne = $check1.checked;
-  const checkedTwo = $check2.checked;
+  const checkedOne = $check1.is( ":checked" );
+  const checkedTwo = $check2.is( ":checked" );
   const tz = $timezone.value; 
   localStorage.setItem("$check1", checkedOne);
   localStorage.setItem("$check2", checkedTwo);
@@ -37,13 +37,13 @@ $save.click(function() {
 
 $cancel.click(function() {
   localStorage.clear();
-  let checkedOne = $check1.checked;
-  let checkedTwo = $check2.checked;
+  let checkedOne = $check1.is( ":checked" );
+  let checkedTwo = $check2.is( ":checked" );
   if (checkedOne) {
-    $check1.checked = false;
+    $check1.is( ":checked" ) = false;
   }
   if (checkedTwo) {
-    $check2.checked = false;
+    $check2.is( ":checked" ) = false;
   }
   $timezone.value = "";
 });
@@ -53,10 +53,10 @@ function localSettings() {
   let checkedTwo = localStorage.getItem("$check2") === "true";
   let tz = localStorage.getItem("$timezone");
   if (checkedOne) {
-    $check1.setAttribute("checked", true);
+    $check1.attr("checked", true);
   }
   if (checkedTwo) {
-    $check2.setAttribute("checked", true);
+    $check2.attr("checked", true);
   }
   $timezone.value = tz;
 }
