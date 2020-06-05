@@ -15,8 +15,8 @@ $('.close').click(function() {
 $('.profile-picture').click(function() {
     TweenLite.staggerTo($('.profile-picture'), 1, {
         rotate: 360
-    })
-})
+    });
+});
 
 // selectors:
 const $buttonGroup = $('.button-group');
@@ -42,7 +42,7 @@ function over(){
         scaleY: 1.2,
         ease: Elastic.easeOut,
         transformOrigin:"center center"
-    })
+    });
 
     TweenLite.to($spiral, 0.7, {
         opacity: 1,
@@ -50,15 +50,15 @@ function over(){
         scaleY: 1.05,
         rotate: 720,
         transformOrigin:"center center"
-    })
+    });
 
     TweenLite.staggerTo($outerItems, 0.4, {
         scaleX: 1.05,
         scaleY: 1.05,
         transformOrigin:"center center",
         delay: 0.65
-    }) 
-};    
+    });
+}    
     
     
 // hover out animation effect:
@@ -68,22 +68,22 @@ function out(){
         scaleY: 1,
         ease: Elastic.easeOut,
         transformOrigin:"center center"
-    })
+    });
 
     TweenLite.to($spiral, 0.7, {
         scaleX: 0,
         scaleY: 0,
         rotate: -720,
         transformOrigin:"center center"
-    })
+    });
 
     TweenLite.staggerTo($outerItems, 0.4, {
         scaleX: 0.95,
         scaleY: 0.95,
         transformOrigin:"center center",
         delay: 0.05
-    }) 
-};
+    });
+}
 
 
 // click event listener:
@@ -96,7 +96,7 @@ $buttonGroup.click(function(){
         scaleY: 0.9,
         autoAlpha: 0,
         transformOrigin:"center center"
-    })
+    });
     
     // pulls all elements closer and bursts them out violently after reaching 0 scale to create the illusion of an implosion: 
     TweenLite.staggerTo($spiral, 1.5, {
@@ -105,7 +105,7 @@ $buttonGroup.click(function(){
         rotate: -720,
         transformOrigin:"center center",
         delay: 0.2
-    })
+    });
 
     TweenLite.staggerTo($spiral, 4, {
         scaleX: 4,
@@ -113,21 +113,21 @@ $buttonGroup.click(function(){
         rotate: 14400,
         transformOrigin:"center center",
         delay: 1.7
-    })
+    });
 
     TweenLite.to($outerItems, 1.5, {
         scaleX: 0,
         scaleY: 0,
         transformOrigin:"center center",
         delay: 0.3
-    })
+    });
 
     TweenLite.to($outerItems, 3.5, {
         scaleX: 4,
         scaleY: 4,
         transformOrigin:"center center",
         delay: 1.8
-    })
+    });
     // hides the overlay: 
     $myOverlay.delay(3200).hide('fade');
 });
@@ -199,7 +199,7 @@ const members = [
   'Victoria Chambers',
   'Dan Oliver',
   'Dawn Wood'
-]
+];
 
 $contactSearch.autocomplete({source: members});
 

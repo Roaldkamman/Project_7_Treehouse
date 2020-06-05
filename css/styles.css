@@ -45,7 +45,7 @@
   }
 
   .company-name {
-    font-weight: 1;
+    font-weight: 100;
     font-size: 1.3em;
     margin: 20px auto 20px 20px;
   }
@@ -423,7 +423,6 @@
 
   .socialmedia h3 {
     align-self: flex-start;
-  
     width: 100%;
     margin-left: 20px;
   }
@@ -693,7 +692,6 @@
   }
   
   .toggle {
-    align-self: left;
     margin-left: 20px;
     display: grid;
     height: 40px;
@@ -910,7 +908,6 @@
     }
 
     .toggle {
-      align-self: left;
       margin-left: 40px;
     }
 
@@ -925,7 +922,6 @@
         width: 28%;
       }
       .toggle {
-        align-self: left;
         margin-left: 40px;
       }
 
