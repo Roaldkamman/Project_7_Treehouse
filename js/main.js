@@ -212,6 +212,7 @@ const $submitMessage = $('.submit-message');
 $submitMessage.hide();
 
 $formButton.click(function(e) {
+  e.preventDefault();
   if ($contactSearch.val() === '' || $textArea.val() === '') {
     $submitMessage.text("Please provide a recipient AND message.");
     $submitMessage.css("background-color","red");
