@@ -24,7 +24,7 @@ const $spiral = $('.spiral');
 const $outerItems = $('.outer-items');
 const $circle = $('.circle');
 const $myOverlay = $('.myAnimatedOverlay');
-
+// animation removed to be transferred to portfolio and removed from this file.
 // hides the spiral at the start:
 TweenLite.to($spiral, 0, {
     opacity: 0, 
